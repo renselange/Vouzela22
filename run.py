@@ -30,7 +30,7 @@ if uploadFile:
 
     st.session_state.first_day = st.sidebar.date_input('Ajuste la fecha de inicio según sea necesario:', st.session_state.first_day,key='what 1')
     st.session_state.last_day  = st.sidebar.date_input('Ajuste la fecha de cierre según sea necesario:', st.session_state.last_day,key='what 2')
-    st.sidebar.write('Reinicie el programa para reiniciar la ventana de datos')
+    st.sidebar.write('Reinicie el programa para restablecer el rango de fechas')
 
     if st.session_state.last_day < st.session_state.first_day : st.session_state.last_day = st.session_state.first_day
 
@@ -62,10 +62,13 @@ if page.startswith('1.'):
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
-
     xt.columns = ['%s:O'%v for v in xt.columns] 
-
     st.bar_chart(xt)
+
+    '# To be added:'
+    '- number of enchantedness items checked by week x nationality'
+    '- Satisfaction by week x nationality'
+    '- Any ideas?'
 
 ##################### show entire data table ##################
 
