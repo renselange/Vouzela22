@@ -69,6 +69,7 @@ if page.startswith('1.'):
     '- Number of enchantedness items checked by week x nationality'
     '- Satisfaction by week x nationality'
     '- Any other ideas ? Intention: show the most useful stuff immediately'
+    'LATER: Click on map of Vouzela (e.g., a resto) and get info'
 
 ##################### show entire data table ##################
 
