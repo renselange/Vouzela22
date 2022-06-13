@@ -59,7 +59,10 @@ page = st.sidebar.radio(
 
 if page.startswith('1.'):
 
-    '#DA The most striking'
+    '#weekly survey respondents'
+    visitors = pd.crosstab(dd['dateEnd'].dt.weekofyear.tolist(), dd['Nacionalidade'])
+
+    st.line_chart(visitors)
 
 ##################### show entire data table ##################
 
