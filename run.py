@@ -17,11 +17,8 @@ st.set_page_config(
     layout="wide"
 )
 
-#st.set_page_config(page_title=None, page_icon=None, layout="centered", initial_sidebar_state="auto", menu_items=None)
-
 
 uploadFile = 'POCPWA_AppExport_15-3-2022.xlsx'
-#pd.set_option('display.colheader_justify', 'center')
 
 
 if uploadFile:
@@ -46,7 +43,7 @@ if uploadFile:
 
     st.write('Carregado de "%s"'%uploadFile,'com',dd.shape[0],'casos completos. %s %s'%(st.session_state.first_day,st.session_state.last_day)) 
     
-    when = '''XDados Vouzela até %s'''%born
+    when = '''Dados Vouzela até %s'''%born
 
 
 page = st.sidebar.radio(
