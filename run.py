@@ -9,7 +9,7 @@ import matplotlib as plt
 
 from read_data import read_vouzela_excel #, collect_enchantment_responses, enchantment_order
 from word_cloud import make_image
-#from enchantment_pre_process import item_to_seq, seq_to_item
+from enchantment_pre_process import item_to_seq, seq_to_item
 
 st.set_page_config(
     page_title="Vouzela Tourism Dashboard",
