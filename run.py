@@ -28,9 +28,9 @@ if uploadFile:
     st.session_state.first_day = min(dd['dateEnd'])
     st.session_state.last_day = max(dd['dateEnd'])
 
-    st.session_state.first_day = st.sidebar.date_input('You may change start date', st.session_state.first_day,key='what 1')
-    st.session_state.last_day  = st.sidebar.date_input('You may change the end date', st.session_state.last_day,key='what 2')
-    st.sidebar.write('Reset the window by clicking the task bar')
+    st.session_state.first_day = st.sidebar.date_input('Ajuste la fecha de inicio según sea necesario:', st.session_state.first_day,key='what 1')
+    st.session_state.last_day  = st.sidebar.date_input('Ajuste la fecha de cierre según sea necesario:', st.session_state.last_day,key='what 2')
+    st.sidebar.write('Reinicie el programa para reiniciar la ventana de datos')
 
     if st.session_state.last_day < st.session_state.first_day : st.session_state.last_day = st.session_state.first_day
 
@@ -48,7 +48,7 @@ if uploadFile:
 
 page = st.sidebar.radio(
     when, [
-    "1. The Bottom-Line",
+    "1. Vista rápida ...",
     "2. Inspecione o arquivo de dados", 
     "3. Contagens de frequência simples", 
     "4. Wordclouds de respostas escritas",
@@ -56,10 +56,9 @@ page = st.sidebar.radio(
 )
 
 
-
 if page.startswith('1.'):
 
-    st.write('Weekly no. of respondents by nationality (adjust window as desired - can crash)')
+    st.write('Recuento semanal de encuestados por nacionalidad (planned: the Sunday date of the week as label)')
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
