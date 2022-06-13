@@ -59,14 +59,14 @@ page = st.sidebar.radio(
 
 if page.startswith('1.'):
 
-    '#weekly survey respondents'
+    '#By nationality'
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
 
     xt.columns = ['España:O','France:O','Portugal:O']
 
-    st.write(xt)
+    #st.write(xt)
 
     st.bar_chart(xt)
 
