@@ -62,6 +62,8 @@ if page.startswith('1.'):
     '#weekly survey respondents'
     visitors = pd.crosstab(dd['dateEnd'].dt.weekofyear.tolist(), dd['Nacionalidade'])
 
+    print(visitors)
+
     st.line_chart(visitors)
 
 ##################### show entire data table ##################
