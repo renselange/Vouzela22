@@ -64,7 +64,7 @@ if page.startswith('1.'):
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
 
-    xt.index.columns = ['España:O','France:O','Portugal:O']
+    xt.columns = ['España:O','France:O','Portugal:O']
 
     st.write(xt)
 
