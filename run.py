@@ -60,6 +60,7 @@ page = st.sidebar.radio(
 if page.startswith('1.'):
 
     '#weekly survey respondents'
+    st.write(dd['dateEnd'].dt.isocalendar().weektolist())
     visitors = pd.crosstab(dd['dateEnd'].dt.weekofyear.tolist(), dd['Nacionalidade'])
 
     print(visitors)
