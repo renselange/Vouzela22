@@ -1,0 +1,7 @@
+streamlit
+typing-extensions
+openpyxl
+unidecode
+wordcloud
+sklearn 
+plotly
