@@ -59,7 +59,7 @@ page = st.sidebar.radio(
 
 if page.startswith('1.'):
 
-    st.write('# By nationality')
+    st.write('#Respondents by nationality across time (set window as desired)')
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
