@@ -64,7 +64,7 @@ if page.startswith('1.'):
     visitors = pd.DataFrame({'week':dates, 'Nacionalidade': dd['Nacionalidade']})
     xt = pd.crosstab(visitors['week'],visitors['Nacionalidade'])
 
-    xt.columns = ['España:O','France:O','Portugal:O'] ### fix
+    xt.columns = ['%s:O'%v for v in xt.columns] 
 
     st.bar_chart(xt)
 
