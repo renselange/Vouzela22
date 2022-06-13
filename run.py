@@ -65,7 +65,7 @@ if page.startswith('1.'):
 
     xt = pd.crosstab(visitors['week #:O'],visitors['Nacionalidade:O'])
 
-    #xt.index = [int(v) for v in xt.index]
+    xt.index = [int(v) for v in xt.index]
 
     st.write(xt)
 
