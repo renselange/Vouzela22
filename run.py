@@ -143,7 +143,6 @@ elif page.startswith('5.'):
 
     st.pyplot(bar_fig)
 
-    pyautogui.hotkey("ctrl","F5")
 
 
 
