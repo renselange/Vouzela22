@@ -61,9 +61,11 @@ if page.startswith('1.'):
 
     '#weekly survey respondents'
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
-    visitors = pd.DataFrame({'week #':dates, 'Nacionalidade': dd['Nacionalidade']})
+    visitors = pd.DataFrame({'week #:O':dates, 'Nacionalidade:O': dd['Nacionalidade']})
 
     xt = pd.crosstab(visitors['week #'],visitors['Nacionalidade'])
+
+    xt.index = [int(v) for v in xt.index]
 
     st.write(xt)
 
