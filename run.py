@@ -66,9 +66,9 @@ if page.startswith('1.'):
     st.bar_chart(xt)
 
     '# To be added:'
-    '- number of enchantedness items checked by week x nationality'
+    '- Number of enchantedness items checked by week x nationality'
     '- Satisfaction by week x nationality'
-    '- Any ideas?'
+    '- Any other ideas ? Intention: show the most useful stuff immediately'
 
 ##################### show entire data table ##################
 
