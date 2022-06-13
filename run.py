@@ -61,13 +61,13 @@ if page.startswith('1.'):
 
     '#weekly survey respondents'
     dates = [int(w) for w in dd['dateEnd'].dt.isocalendar().week.tolist()]
-    visitors = pd.DataFrame({'week':dates, 'Nat': dd['Nacionalidade']})
+    visitors = pd.DataFrame({'week #':dates, 'Nacionalidade': dd['Nacionalidade']})
 
-    xt = pd.crosstab(visitors['week'],visitors['Nat'])
+    xt = pd.crosstab(visitors['week #'],visitors['Nacionalidade'])
 
     st.write(xt)
 
-    st.line_chart(xt)
+    st.bar_chart(xt)
 
 ##################### show entire data table ##################
 
