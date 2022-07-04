@@ -28,8 +28,8 @@ if uploadFile:
     st.session_state.first_day = min(dd['dateEnd'])
     st.session_state.last_day = max(dd['dateEnd'])
 
-    st.session_state.first_day = st.sidebar.date_input('Ajuste la fecha de inicio según sea necesario:', st.session_state.first_day,key='what 1')
-    st.session_state.last_day  = st.sidebar.date_input('Ajuste la fecha de cierre según sea necesario:', st.session_state.last_day,key='what 2')
+    st.session_state.first_day = st.sidebar.date_input('xAjuste la fecha de inicio según sea necesario:', st.session_state.first_day,key='what 1')
+    st.session_state.last_day  = st.sidebar.date_input('xAjuste la fecha de cierre según sea necesario:', st.session_state.last_day,key='what 2')
     st.sidebar.write('Reinicie el programa para restablecer el rango de fechas')
 
     if st.session_state.last_day < st.session_state.first_day : st.session_state.last_day = st.session_state.first_day
