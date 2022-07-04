@@ -140,7 +140,7 @@ elif page.startswith('5.'):
 
     sub_enchanted = enchanted.iloc[:-1,1:-1] 
     sub_enchanted.index = enchanted['Fonte de Encantamento'].iloc[:-1]
-    sub_enchanted.plot.bar(alpha=0.8, ax=bar_ax, title="counts *** simulated data here")
+    sub_enchanted.plot.bar(alpha=0.5, ax=bar_ax) #, title="counts *** simulated data here")
 
     st.pyplot(bar_fig)
 
