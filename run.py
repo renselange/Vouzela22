@@ -131,6 +131,7 @@ elif page.startswith('5.'):
     enchanted['ROW-TOTAL'] = enchanted.apply(lambda cols: sum(cols[v] for v in enchanted.columns if not v.startswith('Fonte')),axis=1)
     enchanted.sort_values(by='ROW-TOTAL',inplace=True)
 
+    
     st.write(enchanted)
 
 
